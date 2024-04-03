@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="flaticon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <title>About Us|SafetyFirst</title>
+</head>
+<body>
+    <div class="video-container somethingelse">
+        <video autoplay muted loop>
+          <source src="img/about2.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <header class="cd-header">
+            <div class="header-wrapper">
+                <div class="logo-wrap">
+                    <a href="index.html" class="hover-target"><span></span>SafetyFirst</a>
+                </div>
+                <div class="nav-but-wrap">
+                    <div class="menu-icon hover-target">
+                        <span class="menu-icon__line menu-icon__line-left"></span>
+                        <span class="menu-icon__line"></span>
+                        <span class="menu-icon__line menu-icon__line-right"></span>
+                    </div>					
+                </div>					
+            </div>				
+        </header>
+
+    <div class="nav">
+        <div class="nav__content">
+            <ul class="nav__list">
+                <li class="nav__list-item active-nav"><a href="index.html" class="hover-target">Home</a></li>
+                <li class="nav__list-item"><a href="about.html" class="hover-target">About</a></li>
+                <li class="nav__list-item"><a href="service.html" class="hover-target">Services</a></li>
+                <li class="nav__list-item"><a href="blog.html" class="hover-target">Blogs</a></li>
+        <li class="nav__list-item"><a href="contact.html" class="hover-target">contact</a></li>
+            </ul>
+        </div>
+    </div>		
+
+    <div class="section full-height over-hide">	
+        <div class="switch-wrap">
+            <h1>About Us</h1>
+                <div id="circle"></div>
+        </div>
+    </div>	
+    
+    <div class='cursor' id="cursor"></div>
+    <div class='cursor2' id="cursor2"></div>
+    <div class='cursor3' id="cursor3"></div>
+
+
+  </div>
+  
+  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+
+
+
+(function($) { "use strict";
+    
+//Page cursors
+
+document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+    t.style.left = n.clientX + "px", 
+    t.style.top = n.clientY + "px", 
+    e.style.left = n.clientX + "px", 
+    e.style.top = n.clientY + "px", 
+    i.style.left = n.clientX + "px", 
+    i.style.top = n.clientY + "px"
+});
+var t = document.getElementById("cursor"),
+    e = document.getElementById("cursor2"),
+    i = document.getElementById("cursor3");
+function n(t) {
+    e.classList.add("hover"), i.classList.add("hover")
+}
+function s(t) {
+    e.classList.remove("hover"), i.classList.remove("hover")
+}
+s();
+for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+    o(r[a])
+}
+function o(t) {
+    t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+}
+
+//Navigation
+
+var app = function () {
+    var body = undefined;
+    var menu = undefined;
+    var menuItems = undefined;
+    var init = function init() {
+        body = document.querySelector('body');
+        menu = document.querySelector('.menu-icon');
+        menuItems = document.querySelectorAll('.nav__list-item');
+        applyListeners();
+    };
+    var applyListeners = function applyListeners() {
+        menu.addEventListener('click', function () {
+            return toggleClass(body, 'nav-active');
+        });
+    };
+    var toggleClass = function toggleClass(element, stringClass) {
+        if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
+    };
+    init();
+}();
+
+
+//Switch light/dark
+
+$("#switch").on('click', function () {
+    if ($("body").hasClass("light")) {
+        $("body").removeClass("light");
+        $("#switch").removeClass("switched");
+    }
+    else {
+        $("body").addClass("light");
+        $("#switch").addClass("switched");
+    }
+});
+
+})(jQuery); 
+</script>
+
+      <!-- About Us Section -->
+<section class="about-us">
+    <div class="section full-height over-hide">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="img/about.jpg" alt="About Us">
+        </div>
+        <div class="about-text">
+          <h2 class="something">About Us</h2>
+          <p class="about-para">
+            At SafetyFirst, we are dedicated to providing exceptional security and peace of mind. Our commitment to excellence drives us to go above and beyond to ensure your safety.
+          </p>
+          <div class="about-item">
+            
+            <div class="about-details">
+              <h4 class="about-title">Decades of Experience</h4>
+              <p class="about-desc">With over 20 years of industry experience, we bring unmatched expertise to every aspect of our services.</p>
+            </div>
+          </div>
+          <div class="about-item">
+            <div class="about-icon">
+              <img src="img/approve.png" alt="Approved Icon">
+            </div>
+            <div class="about-details">
+              <h4 class="about-title">Government Approved</h4>
+              <p class="about-desc">Our services are proudly recognized and approved by governmental authorities, ensuring the highest standards of quality and reliability.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="count-section">
+    <div class="count-item">
+        <i class="fas fa-users count-icon fa-3x"></i>
+        <h4 class="count-number">250</h4>
+        <p class="count-label">OUR STAFF</p>
+    </div>
+    <div class="count-item">
+        <i class="fas fa-handshake count-icon fa-3x"></i>
+        <h4 class="count-number">1500</h4>
+        <p class="count-label">HAPPY CLIENT</p>
+    </div>
+    <div class="count-item">
+        <i class="fas fa-tasks count-icon fa-3x"></i>
+        <h4 class="count-number">10000</h4>
+        <p class="count-label">PROJECT COMPLETE</p>
+    </div>
+    <div class="count-item">
+        <i class="fas fa-award count-icon fa-3x"></i>
+        <h4 class="count-number">25</h4>
+        <p class="count-label">AWARD WINNING</p>
+    </div>
+</section>
+<!-- Why Choose Us Section -->
+<section class="why-choose">
+    <h2 class="section-heading">Why Choose Us?</h2>
+
+    <div class="section full-height over-hide">
+
+      <div class="why-choose-content">
+        <div class="why-item">
+          <div class="why-icon">
+            <img src="img/service-4.jpg" alt="Top Level Security">
+          </div>
+          <h3 class="why-title">Top Level Security</h3>
+          <p class="why-desc">We provide the highest level of security to ensure your peace of mind. Our advanced systems and expert team work tirelessly to protect your interests.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">
+            <img src="img/service-5.jpg" alt="High Security">
+          </div>
+          <h3 class="why-title">High Security</h3>
+          <p class="why-desc">With a focus on uncompromising security standards, we prioritize your safety. Our robust protocols and cutting-edge technologies create a fortress of protection.</p>
+        </div>
+        <div class="why-item">
+          <div class="why-icon">
+            <img src="img/service-6.jpg" alt="Trained Guards">
+          </div>
+          <h3 class="why-title">Trained Guards</h3>
+          <p class="why-desc">Our highly trained guards undergo rigorous training to handle any situation. Their expertise and dedication ensure a secure environment for you.</p>
+        </div>
+       
+        
+        <div class="why-item">
+          <div class="why-icon">
+            <img src="img/feature.jpg" alt="24/7 Support">
+          </div>
+          <h3 class="why-title">24/7 Support</h3>
+          <p class="why-desc">We're here for you around the clock. Our dedicated support team ensures that you have assistance whenever you need it, ensuring your continuous safety.</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+  
+
+
+
+
+
+
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+
+        <h3>Safety<span>First</span></h3>
+
+        <p class="footer-links">
+            <a href="#" class="link-1">Home</a>
+            
+            <a href="#">About</a>
+        
+            <a href="#">Blog</a>
+        
+            <a href="#">Guards</a>
+            
+            <a href="#">Services</a>
+            
+            <a href="#">Contact</a>
+        </p>
+
+        <p class="footer-company-name">SafetyFirst © 2023</p>
+    </div>
+
+    <div class="footer-center">
+
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+1.555.555.5555</p>
+        </div>
+
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">support@safetyfirst.com</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer-right">
+
+        <p class="footer-company-about">
+            <span>About the company</span>
+               At SafetyFirst, we are dedicated to providing exceptional security and peace of mind. Our commitment to excellence drives us to go above and beyond to ensure your safety.
+
+        </p>
+
+        <div class="footer-icons" style="display: flex; flex-direction: row; gap: 10px;">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+
+    </div>
+
+</footer>
+
+<script>
+    function animateCounters() {
+    const counters = document.querySelectorAll('.count-number');
+    const duration = 2000; // Duration of the counting animation in milliseconds
+    
+    counters.forEach(counter => {
+        const target = +counter.innerText;
+        const increment = target / (duration / 10); // Adjust the increment calculation
+        
+        let currentCount = 0;
+
+        const updateCount = () => {
+            if (currentCount < target) {
+                currentCount += increment;
+                counter.innerText = Math.round(currentCount);
+                requestAnimationFrame(updateCount);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        updateCount();
+    });
+}
+
+function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            observer.unobserve(entry.target);
+        }
+    });
+}
+
+const observer = new IntersectionObserver(handleIntersection, { threshold: 0.2 });
+
+const section = document.querySelector('.count-section');
+observer.observe(section);
+</script>
+</body>
+</html>

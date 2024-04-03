@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="flaticon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Contact Us|SafetyFirst</title>
+    
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop>
+          <source src="img/CONTACT.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <header class="cd-header">
+            <div class="header-wrapper">
+                <div class="logo-wrap">
+                    <a href="index.html" class="hover-target"><span></span>SafetyFirst</a>
+                </div>
+                <div class="nav-but-wrap">
+                    <div class="menu-icon hover-target">
+                        <span class="menu-icon__line menu-icon__line-left"></span>
+                        <span class="menu-icon__line"></span>
+                        <span class="menu-icon__line menu-icon__line-right"></span>
+                    </div>					
+                </div>					
+            </div>				
+        </header>
+    
+        <div class="nav">
+            <div class="nav__content">
+                <ul class="nav__list">
+                    <li class="nav__list-item active-nav"><a href="index.html" class="hover-target">Home</a></li>
+                    <li class="nav__list-item"><a href="about.html" class="hover-target">About</a></li>
+                    <li class="nav__list-item"><a href="service.html" class="hover-target">Services</a></li>
+                    <li class="nav__list-item"><a href="blog.html" class="hover-target">Blogs</a></li>
+            <li class="nav__list-item"><a href="contact.html" class="hover-target">contact</a></li>
+                </ul>
+            </div>
+        </div>		
+    
+        <div class="section full-height over-hide">	
+            <div class="switch-wrap">
+                <h1>Contact Us</h1>
+                    <div id="circle"></div>
+            </div>
+        </div>	
+        
+        <div class='cursor' id="cursor"></div>
+        <div class='cursor2' id="cursor2"></div>
+        <div class='cursor3' id="cursor3"></div>
+    
+    
+      </div>
+      <div class="main">
+        <div class="bio">
+            <h3 class="header">SafetyFirst</h3>
+            <p>Please fill out the form for further details!</p>
+            <a href="https://twitter.com/" class="bio-link">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a href="https://github.com/" class="bio-link">
+                <i class="fab fa-github"></i> Github
+            </a>
+            <a href="https://facebook.com" class="bio-link">
+                <i class="fab fa-facebook-f"></i> Facebook
+            </a>
+        </div>
+        <div class="contact">
+            <form id="form">
+                <legend class="header">Get In Touch</legend>
+                <fieldset>
+                    <label for="name-input" class="fa fa-user" aria-hidden="true"></label>
+                    <input type="text" placeholder="Your name..." id="name-input" required>
+                </fieldset>
+                <fieldset>
+                    <label for="email-input" class="fa fa-envelope" aria-hidden="true"></label>
+                    <input type="email" placeholder="Your email..." id="email-input" required>
+                </fieldset>
+                <fieldset>
+                    <label for="message-input" class="fa fa-comment" aria-hidden="true"></label>
+                    <textarea placeholder="Your Message..." id="message-input" required></textarea>
+                </fieldset>
+                <fieldset>
+                    <button type="submit" id="btn-submit">Send</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <p>Form Submitted Successfully</p>
+            <button id="popup-close">Close</button>
+        </div>
+    </div>
+
+
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        
+(function($) { "use strict";
+		
+        //Page cursors
+    
+        document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+            t.style.left = n.clientX + "px", 
+            t.style.top = n.clientY + "px", 
+            e.style.left = n.clientX + "px", 
+            e.style.top = n.clientY + "px", 
+            i.style.left = n.clientX + "px", 
+            i.style.top = n.clientY + "px"
+        });
+        var t = document.getElementById("cursor"),
+            e = document.getElementById("cursor2"),
+            i = document.getElementById("cursor3");
+        function n(t) {
+            e.classList.add("hover"), i.classList.add("hover")
+        }
+        function s(t) {
+            e.classList.remove("hover"), i.classList.remove("hover")
+        }
+        s();
+        for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+            o(r[a])
+        }
+        function o(t) {
+            t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+        }
+        
+        //Navigation
+    
+        var app = function () {
+            var body = undefined;
+            var menu = undefined;
+            var menuItems = undefined;
+            var init = function init() {
+                body = document.querySelector('body');
+                menu = document.querySelector('.menu-icon');
+                menuItems = document.querySelectorAll('.nav__list-item');
+                applyListeners();
+            };
+            var applyListeners = function applyListeners() {
+                menu.addEventListener('click', function () {
+                    return toggleClass(body, 'nav-active');
+                });
+            };
+            var toggleClass = function toggleClass(element, stringClass) {
+                if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
+            };
+            init();
+        }();
+    
+        
+        //Switch light/dark
+        
+        $("#switch").on('click', function () {
+            if ($("body").hasClass("light")) {
+                $("body").removeClass("light");
+                $("#switch").removeClass("switched");
+            }
+            else {
+                $("body").addClass("light");
+                $("#switch").addClass("switched");
+            }
+        });
+        
+    })(jQuery); 
+    
+    </script>    <script>document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    
+    // Simulate form submission (replace this with actual submission logic)
+    setTimeout(function () {
+        document.getElementById('submit-message').classList.add('show-message');
+    }, 1000);
+});
+</script>
+ <script>const form = document.getElementById("form");
+    const popup = document.getElementById("popup");
+    const popupCloseButton = document.getElementById("popup-close");
+    
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        popup.style.display = "flex";
+    });
+    
+    popupCloseButton.addEventListener("click", function () {
+        popup.style.display = "none";
+    });
+    
+</script>
+</body>
+</html>

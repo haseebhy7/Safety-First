@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs|SafetyFirst</title> 
+       <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  </head>
+<body>
+    <div class="video-container somethingelse">
+        <video autoplay muted loop>
+          <source src="img/blog.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <header class="cd-header">
+            <div class="header-wrapper">
+                <div class="logo-wrap">
+                    <a href="index.html" class="hover-target"><span></span>SafetyFirst</a>
+                </div>
+                <div class="nav-but-wrap">
+                    <div class="menu-icon hover-target">
+                        <span class="menu-icon__line menu-icon__line-left"></span>
+                        <span class="menu-icon__line"></span>
+                        <span class="menu-icon__line menu-icon__line-right"></span>
+                    </div>					
+                </div>					
+            </div>				
+        </header>
+
+    <div class="nav">
+        <div class="nav__content">
+            <ul class="nav__list">
+                <li class="nav__list-item active-nav"><a href="index.html" class="hover-target">Home</a></li>
+                <li class="nav__list-item"><a href="about.html" class="hover-target">About</a></li>
+                <li class="nav__list-item"><a href="service.html" class="hover-target">Services</a></li>
+                <li class="nav__list-item"><a href="blog.html" class="hover-target">Blogs</a></li>
+        <li class="nav__list-item"><a href="contact.html" class="hover-target">contact</a></li>
+            </ul>
+        </div>
+    </div>		
+
+    <div class="section full-height over-hide">	
+        <div class="switch-wrap">
+            <h1>Blogs</h1>
+                <div id="circle"></div>
+        </div>
+    </div>	
+    
+    <div class='cursor' id="cursor"></div>
+    <div class='cursor2' id="cursor2"></div>
+    <div class='cursor3' id="cursor3"></div>
+
+
+  </div>
+  
+   <!-- Blog Content -->
+<section class="blog-content">
+    <div class="blog-post">
+      <img src="img/blog-2.jpg" alt="Blog Post 1">
+      <h2>Enhancing Police Security with Technology</h2>
+      <p>In today's rapidly evolving world, ensuring the safety and security of our communities is of paramount importance.
+        Police security plays a crucial role in maintaining law and order. With the advancements in technology,
+        law enforcement agencies are now equipped with powerful tools to combat crime and enhance public safety.
+        From surveillance systems and facial recognition technology to predictive analytics and real-time communication,
+        technology is revolutionizing police security operations.
+       </p>
+      <div class="vote-buttons">
+        <button class="upvote-button"><i class="fas fa-thumbs-up"></i></button>
+        <button class="downvote-button"><i class="fas fa-thumbs-down"></i></button>
+      </div>
+    </div>
+      
+    <div class="blog-post">
+      <img src="img/blog-1.jpg" alt="Blog Post 2">
+      <h2>Securing Our Streets: The Power of Security Cameras</h2>
+      <p>Security cameras have become an indispensable tool in modern policing strategies. These unblinking sentinels
+        play a vital role in deterring criminal activities and solving crimes. Whether they're placed at street corners,
+        public spaces, or critical infrastructure, security cameras provide law enforcement with invaluable insights.
+      <div class="vote-buttons">
+        <button class="upvote-button"><i class="fas fa-thumbs-up"></i></button>
+        <button class="downvote-button"><i class="fas fa-thumbs-down"></i></button>
+      </div>
+    </div>
+  </section>
+  
+  <div class="popup-container" id="popupContainer">
+    <div class="popup">
+      <p>Voted successfully!</p>
+      <button onclick="hidePopup()">Close</button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+
+        <h3>Safety<span>First</span></h3>
+
+        <p class="footer-links">
+            <a href="#" class="link-1">Home</a>
+            
+            <a href="#">About</a>
+        
+            <a href="#">Blog</a>
+        
+            <a href="#">Guards</a>
+            
+            <a href="#">Services</a>
+            
+            <a href="#">Contact</a>
+        </p>
+
+        <p class="footer-company-name">SafetyFirst © 2023</p>
+    </div>
+
+    <div class="footer-center">
+
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+1.555.555.5555</p>
+        </div>
+
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">support@safetyfirst.com</a></p>
+        </div>
+
+    </div>
+
+    <div class="footer-right">
+
+        <p class="footer-company-about">
+            <span>About the company</span>
+               At SafetyFirst, we are dedicated to providing exceptional security and peace of mind. Our commitment to excellence drives us to go above and beyond to ensure your safety.
+
+        </p>
+
+        <div class="footer-icons" style="display: flex; flex-direction: row; gap: 10px;">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+
+    </div>
+
+</footer>
+  <script>
+    const upvoteButtons = document.querySelectorAll('.upvote-button');
+ const downvoteButtons = document.querySelectorAll('.downvote-button');
+ const popupContainer = document.getElementById('popupContainer');
+
+ function showPopup() {
+   popupContainer.style.display = 'flex';
+ }
+
+ function hidePopup() {
+   popupContainer.style.display = 'none';
+ }
+
+ upvoteButtons.forEach(button => {
+   button.addEventListener('click', () => {
+     showPopup();
+   });
+ });
+
+ downvoteButtons.forEach(button => {
+   button.addEventListener('click', () => {
+     showPopup();
+   });
+ });
+
+ </script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+
+
+
+(function($) { "use strict";
+    
+//Page cursors
+
+document.getElementsByTagName("body")[0].addEventListener("mousemove", function(n) {
+    t.style.left = n.clientX + "px", 
+    t.style.top = n.clientY + "px", 
+    e.style.left = n.clientX + "px", 
+    e.style.top = n.clientY + "px", 
+    i.style.left = n.clientX + "px", 
+    i.style.top = n.clientY + "px"
+});
+var t = document.getElementById("cursor"),
+    e = document.getElementById("cursor2"),
+    i = document.getElementById("cursor3");
+function n(t) {
+    e.classList.add("hover"), i.classList.add("hover")
+}
+function s(t) {
+    e.classList.remove("hover"), i.classList.remove("hover")
+}
+s();
+for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+    o(r[a])
+}
+function o(t) {
+    t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+}
+
+//Navigation
+
+var app = function () {
+    var body = undefined;
+    var menu = undefined;
+    var menuItems = undefined;
+    var init = function init() {
+        body = document.querySelector('body');
+        menu = document.querySelector('.menu-icon');
+        menuItems = document.querySelectorAll('.nav__list-item');
+        applyListeners();
+    };
+    var applyListeners = function applyListeners() {
+        menu.addEventListener('click', function () {
+            return toggleClass(body, 'nav-active');
+        });
+    };
+    var toggleClass = function toggleClass(element, stringClass) {
+        if (element.classList.contains(stringClass)) element.classList.remove(stringClass);else element.classList.add(stringClass);
+    };
+    init();
+}();
+
+
+//Switch light/dark
+
+$("#switch").on('click', function () {
+    if ($("body").hasClass("light")) {
+        $("body").removeClass("light");
+        $("#switch").removeClass("switched");
+    }
+    else {
+        $("body").addClass("light");
+        $("#switch").addClass("switched");
+    }
+});
+
+})(jQuery); 
+</script>
+</body>
+</html>

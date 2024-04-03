@@ -1,0 +1,409 @@
+/* Reset some default styles */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+  
+  /* Apply a futuristic background */
+  .about-us {
+    background: linear-gradient(to bottom, #222, #111);
+    color: #fff;
+    padding: 100px 0;
+  }
+  
+  /* Center the content */
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .about-text {
+    width: 60%;
+    padding: 10px;
+  }
+  
+  /* Style headings and paragraphs */
+  .something {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .about-para {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color:white;
+  }
+  
+  /* Style the about-items */
+  .about-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color:white;
+
+  }
+  
+  .about-icon img {
+    max-width: 40px;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .about-title {
+    font-size: 24px;
+    font-weight: bold;
+    color:white;
+
+  }
+  
+  .about-desc {
+    font-size: 16px;
+ color:white;
+  }
+  
+  /* Add some animations */
+  .about-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 2s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Add some hover effects */
+  .about-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  
+  .count-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #a91f1f;
+}
+
+.count-item {
+    text-align: center;
+}
+
+.count-number {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.count-label {
+    font-size: 14px;
+}
+
+
+
+@media screen and (min-width: 250px) and (max-width: 568px) {
+.count-section{
+    display: flex;
+    flex-direction: column;
+
+}
+.about-image img {
+    display: none;
+  }
+}
+/* Style the Why Choose Us section */
+.why-choose {
+    background: linear-gradient(to bottom, #111, #222);
+    color: #fff;
+    padding: 100px 0;
+  }
+  
+  .why-choose-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .why-item {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(213, 199, 199, 0.163);
+    text-align: center;
+    color:#ffffff;
+  }
+  
+  .why-icon img {
+    max-width: 260px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .why-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .why-desc {
+    font-size: 16px;
+  }
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .section-heading {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .why-choose-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  
+  @media screen and (max-width: 650px) {
+    .why-choose-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .why-item {
+      margin-bottom: 20px;
+    }
+    
+  }
+  
+  
+  @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+  * {
+    font-family: Open Sans;
+  }
+  
+
+  .footer-distributed{
+      background: #fdfdfd;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+      box-sizing: border-box;
+      width: 100%;
+      text-align: left;
+      font: bold 16px sans-serif;
+      padding: 55px 50px;
+  }
+  
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+      display: inline-block;
+      vertical-align: top;
+  }
+  
+  /* Footer left */
+  
+  .footer-distributed .footer-left{
+      width: 40%;
+  }
+  
+  /* The company logo */
+  
+  .footer-distributed h3{
+      color:  #000000;
+      font: normal 36px 'Open Sans', cursive;
+      margin: 0;
+  }
+  
+  .footer-distributed h3 span{
+      color:  rgb(255, 105, 71);
+  }
+  
+  /* Footer links */
+  
+  .footer-distributed .footer-links{
+      color:  #000000;
+      margin: 20px 0 12px;
+      padding: 0;
+  }
+  
+  .footer-distributed .footer-links a{
+      display:inline-block;
+      line-height: 1.8;
+    font-weight:400;
+      text-decoration: none;
+      color:  inherit;
+  }
+  
+  .footer-distributed .footer-company-name{
+      color:  #000000;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+  }
+  
+  /* Footer Center */
+  
+  .footer-distributed .footer-center{
+      width: 35%;
+  }
+  
+  .footer-distributed .footer-center i{
+      background-color:  #33383b;
+      color: #ffffff;
+      font-size: 25px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 42px;
+      margin: 10px 15px;
+      vertical-align: middle;
+  }
+  
+  .footer-distributed .footer-center i.fa-envelope{
+      font-size: 17px;
+      line-height: 38px;
+  }
+  
+  .footer-distributed .footer-center p{
+      display: inline-block;
+      color: #000000;
+    font-weight:400;
+      vertical-align: middle;
+      margin:0;
+  }
+  
+  .footer-distributed .footer-center p span{
+      display:block;
+      font-weight: normal;
+      font-size:14px;
+      line-height:2;
+  }
+  
+  .footer-distributed .footer-center p a{
+      color:  rgb(255, 105, 105);
+      text-decoration: none;;
+  }
+  
+  .footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight:300;
+    font-size: 20px;
+    left: 0;
+    color: #000000;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+  .footer-distributed .footer-links .link-1:before {
+    content: none;
+  }
+  
+  /* Footer Right */
+  
+  .footer-distributed .footer-right{
+      width: 20%;
+  }
+  
+  .footer-distributed .footer-company-about{
+      line-height: 20px;
+      color:  #616262;
+      font-size: 13px;
+      font-weight: normal;
+      margin: 0;
+  }
+  
+  .footer-distributed .footer-company-about span{
+      display: block;
+      color:  #000000;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 20px;
+  }
+  
+  .footer-distributed .footer-icons{
+      margin-top: 25px;
+  }
+  
+  .footer-distributed .footer-icons a{
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      background-color:  #ffffff;
+      border-radius: 2px;
+  
+      font-size: 20px;
+      color: #000000;
+      text-align: center;
+      line-height: 35px;
+  
+      margin-right: 3px;
+      margin-bottom: 5px;
+  }
+  
+  /* If you don't want the footer to be responsive, remove these media queries */
+  
+  @media (max-width: 880px) {
+  
+      .footer-distributed{
+          font: bold 14px sans-serif;
+      }
+  
+      .footer-distributed .footer-left,
+      .footer-distributed .footer-center,
+      .footer-distributed .footer-right{
+          display: block;
+          width: 100%;
+          margin-bottom: 40px;
+          text-align: center;
+      }
+  
+      .footer-distributed .footer-center i{
+          margin-left: 0;
+      }
+  
+  }
+  
+  .somethingelse video {
+    height: 100vh;
+  }
+  @media (max-width: 650px) {
+    .testimonial-section{
+        display: flex;
+        flex-direction: column;
+        width: 100%
+    }
+    .testimonial-box{
+        width:100%;
+    }
+  }
